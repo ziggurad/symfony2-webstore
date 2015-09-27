@@ -1,0 +1,6 @@
+services:
+    webstore.product_repository:
+        class: WebstoreBundle\Entity\ProductRepository
+        factory_service: doctrine.orm.entity_manager
+        factory_method: getRepository
+        arguments: ["WebstoreBundle:Product"]

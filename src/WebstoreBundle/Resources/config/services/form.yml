@@ -1,0 +1,7 @@
+services:
+    webstore.form.type.product_choices:
+        class: WebstoreBundle\Form\Type\ProductChoices
+        calls:
+            - [setProductRepository, [@webstore.product_repository]]
+        tags:
+            - { name: form.type, alias: product_choices }
