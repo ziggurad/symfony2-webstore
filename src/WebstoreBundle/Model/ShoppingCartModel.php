@@ -16,6 +16,7 @@ class ShoppingCartModel
 
     /**
      * ShoppingCartModel constructor.
+     *
      * @param CustomerModel $customerModel
      * @param EntityManager $entityManager
      */
@@ -24,7 +25,6 @@ class ShoppingCartModel
         $this->customerModel = $customerModel;
         $this->entityManager = $entityManager;
     }
-
 
     public function addProductToUserShoppingCart(Product $product)
     {

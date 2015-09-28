@@ -5,7 +5,7 @@ namespace WebstoreBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * ShoppingCart
+ * ShoppingCart.
  *
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="WebstoreBundle\Entity\ShoppingCartRepository")
@@ -17,7 +17,7 @@ class ShoppingCart
         $this->dateTimeAdd = new \DateTime();
     }
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
@@ -42,11 +42,10 @@ class ShoppingCart
      */
     private $dateTimeAdd;
 
-
     /**
-     * Get id
+     * Get id.
      *
-     * @return integer
+     * @return int
      */
     public function getId()
     {
@@ -54,7 +53,7 @@ class ShoppingCart
     }
 
     /**
-     * Set customer
+     * Set customer.
      *
      * @param \WebstoreBundle\Entity\Customer
      *
@@ -68,7 +67,7 @@ class ShoppingCart
     }
 
     /**
-     * Get customer
+     * Get customer.
      *
      * @return \WebstoreBundle\Entity\Product
      */
@@ -78,7 +77,7 @@ class ShoppingCart
     }
 
     /**
-     * Set product
+     * Set product.
      *
      * @param \WebstoreBundle\Entity\Product
      *
@@ -92,7 +91,7 @@ class ShoppingCart
     }
 
     /**
-     * Get product
+     * Get product.
      *
      * @return \WebstoreBundle\Entity\Product
      */
@@ -102,7 +101,7 @@ class ShoppingCart
     }
 
     /**
-     * Set dateTimeAdd
+     * Set dateTimeAdd.
      *
      * @param \DateTime $dateTimeAdd
      *
@@ -116,7 +115,7 @@ class ShoppingCart
     }
 
     /**
-     * Get dateTimeAdd
+     * Get dateTimeAdd.
      *
      * @return \DateTime
      */
@@ -125,4 +124,3 @@ class ShoppingCart
         return $this->dateTimeAdd;
     }
 }
-

@@ -36,7 +36,7 @@ class ProductChoices extends AbstractType
                     'class' => 'WebstoreBundle\Entity\Product',
                     'choice_label' => 'name',
                     'required' => true,
-                    'expanded' => true
+                    'expanded' => true,
                 )
             )
             ->add('save', 'submit');

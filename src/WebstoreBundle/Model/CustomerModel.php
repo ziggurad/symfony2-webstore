@@ -20,9 +20,10 @@ class CustomerModel
 
     /**
      * CustomerModel constructor.
-     * @param Session $session
+     *
+     * @param Session            $session
      * @param CustomerRepository $customerRepository
-     * @param EntityManager $entityManager
+     * @param EntityManager      $entityManager
      */
     public function __construct(Session $session, CustomerRepository $customerRepository, EntityManager $entityManager)
     {
@@ -30,7 +31,6 @@ class CustomerModel
         $this->customerRepository = $customerRepository;
         $this->entityManager = $entityManager;
     }
-
 
     public function getCustomer()
     {

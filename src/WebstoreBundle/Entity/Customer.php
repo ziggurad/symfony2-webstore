@@ -5,7 +5,7 @@ namespace WebstoreBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Customer
+ * Customer.
  *
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="WebstoreBundle\Entity\CustomerRepository")
@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Customer
 {
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
@@ -28,11 +28,10 @@ class Customer
      */
     private $sessionId;
 
-
     /**
-     * Get id
+     * Get id.
      *
-     * @return integer
+     * @return int
      */
     public function getId()
     {
@@ -40,7 +39,7 @@ class Customer
     }
 
     /**
-     * Set sessionId
+     * Set sessionId.
      *
      * @param string $sessionId
      *
@@ -54,7 +53,7 @@ class Customer
     }
 
     /**
-     * Get sessionId
+     * Get sessionId.
      *
      * @return string
      */
@@ -63,4 +62,3 @@ class Customer
         return $this->sessionId;
     }
 }
-

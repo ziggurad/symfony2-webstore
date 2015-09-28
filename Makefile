@@ -17,3 +17,11 @@ schema-update:
 
 fixtures:
 	app/console doctrine:fixtures:load
+
+test:
+	app/console --no-interaction lint:yaml src/
+	app/console --no-interaction lint:twig src/
+	vendor/fabpot/php-cs-fixer/php-cs-fixer --level=symfony fix src/ --dry-run --diff
+
+fix:
+	vendor/fabpot/php-cs-fixer/php-cs-fixer --level=symfony fix src/

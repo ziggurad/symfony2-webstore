@@ -21,7 +21,7 @@ class DefaultController extends Controller
         }
 
         return $this->render('WebstoreBundle:Default:index.html.twig', [
-            'form' => $form->createView()
+            'form' => $form->createView(),
         ]);
     }
 }
