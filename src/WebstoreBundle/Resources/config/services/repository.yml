@@ -4,3 +4,9 @@ services:
         factory_service: doctrine.orm.entity_manager
         factory_method: getRepository
         arguments: ["WebstoreBundle:Product"]
+
+    webstore.customer_repository:
+        class: WebstoreBundle\Entity\CustomerRepository
+        factory_service: doctrine.orm.entity_manager
+        factory_method: getRepository
+        arguments: ["WebstoreBundle:Customer"]

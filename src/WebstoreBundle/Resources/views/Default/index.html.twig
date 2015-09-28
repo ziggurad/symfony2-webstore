@@ -1,3 +1,24 @@
-{{ form_start(form) }}
-{{ form_widget(form) }}
-{{ form_end(form) }}
+<p>
+    Available products:
+</p>
+<form class="well form-horizontal" action="{{ path('webstore_homepage') }}"
+      method="post" {{ form_enctype(form) }}>
+    {{ form_row (form._token) }}
+    {% if form_errors(form) %}
+        {{ form_errors(form) }}
+    {% endif %}
+
+    <ul>
+        {% for product in form.products %}
+            <li>
+                {{ form_widget(product) }}
+                {{ form_label(product) }}
+                {{ form_errors(product) }}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <button type="submit" class="btn btn-success">
+        <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Save
+    </button>
+</form>

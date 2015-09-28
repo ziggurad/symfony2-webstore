@@ -1,0 +1,13 @@
+services:
+    webstore.shopping_cart_model:
+        class: WebstoreBundle\Model\ShoppingCartModel
+        arguments:
+            - @webstore.customer_model
+            - @doctrine.orm.entity_manager
+
+    webstore.customer_model:
+        class: WebstoreBundle\Model\CustomerModel
+        arguments:
+            - @session
+            - @webstore.customer_repository
+            - @doctrine.orm.entity_manager
