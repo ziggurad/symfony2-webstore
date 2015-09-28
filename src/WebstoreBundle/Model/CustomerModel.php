@@ -2,6 +2,7 @@
 
 namespace WebstoreBundle\Model;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\EntityManager;
 use Symfony\Component\HttpFoundation\Session\Session;
 use WebstoreBundle\Entity\Customer;
@@ -57,5 +58,15 @@ class CustomerModel
         $customer = $this->getCustomer();
 
         return $customer->getShoppingCarts();
+    }
+
+    public function clearCustomerShoppingCarts()
+    {
+        $customer = $this->getCustomer();
+
+        $customer->setSessionId(new ArrayCollection());
+
+        $this->entityManager->persist($customer);
+        $this->entityManager->flush();
     }
 }

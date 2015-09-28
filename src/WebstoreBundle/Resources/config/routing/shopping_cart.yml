@@ -1,0 +1,3 @@
+shopping_cart_clear:
+    path:     /clearShoppingCart
+    defaults: { _controller: WebstoreBundle:ShoppingCart:clearShoppingCart }

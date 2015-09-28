@@ -1,3 +1,7 @@
 webstore_homepage:
     path:     /
     defaults: { _controller: WebstoreBundle:Default:index }
+
+webstore_shopping_cart:
+    resource: "routing/shopping_cart.yml"
+    prefix: "/shopping_cart"
