@@ -18,11 +18,8 @@ clean:
 update-schemas:
 	app/console --no-interaction doctrine:schema:update --force --env=dev
 
-fixtures:
-	app/console doctrine:fixtures:load
-
 install-without-db:
-	composer --no-interaction install
+	composer install
 	rm -rf app/cache/*
 	app/console --no-interaction cache:clear --env=dev
 
@@ -33,7 +30,7 @@ create-schema:
 	app/console --no-interaction doctrine:schema:create --env=dev
 
 load-fixtures:
-	app/console doctrine:fixtures:load --env=dev
+	app/console doctrine:fixtures:load --append --env=dev
 
 test:
 	app/console --no-interaction lint:yaml src/
