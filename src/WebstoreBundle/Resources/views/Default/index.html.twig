@@ -1,4 +1,16 @@
 <p>
+    My shopping cart:
+</p>
+<div>
+    <ul>
+    {% for shopping_cart in shopping_carts %}
+        <li>
+            {{ shopping_cart.product.name }}
+        </li>
+    {% endfor %}
+    </ul>
+</div>
+<p>
     Available products:
 </p>
 <form class="well form-horizontal" action="{{ path('webstore_homepage') }}"

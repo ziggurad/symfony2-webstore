@@ -21,6 +21,7 @@ class DefaultController extends Controller
         }
 
         return $this->render('WebstoreBundle:Default:index.html.twig', [
+            'shopping_carts' => $this->get('webstore.customer_model')->getCustomerShoppingCarts(),
             'form' => $form->createView(),
         ]);
     }

@@ -26,7 +26,7 @@ class ShoppingCart
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Customer")
+     * @ORM\ManyToOne(targetEntity="Customer", inversedBy="shoppingCarts")
      */
     private $customer;
 

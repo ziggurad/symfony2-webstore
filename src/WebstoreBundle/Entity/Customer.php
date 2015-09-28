@@ -2,6 +2,7 @@
 
 namespace WebstoreBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -12,6 +13,10 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Customer
 {
+    public function __construct()
+    {
+        $this->shoppingCarts = new ArrayCollection();
+    }
     /**
      * @var int
      *
@@ -27,6 +32,11 @@ class Customer
      * @ORM\Column(name="sessionId", type="string", length=255)
      */
     private $sessionId;
+
+    /**
+     * @ORM\OneToMany(targetEntity="ShoppingCart", mappedBy="customer")
+     */
+    private $shoppingCarts;
 
     /**
      * Get id.
@@ -60,5 +70,15 @@ class Customer
     public function getSessionId()
     {
         return $this->sessionId;
+    }
+
+    /**
+     * Get shoppingCart.
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getShoppingCarts()
+    {
+        return $this->shoppingCarts;
     }
 }

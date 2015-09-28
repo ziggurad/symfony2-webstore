@@ -51,4 +51,11 @@ class CustomerModel
 
         return $customer;
     }
+
+    public function getCustomerShoppingCarts()
+    {
+        $customer = $this->getCustomer();
+
+        return $customer->getShoppingCarts();
+    }
 }
